@@ -27,19 +27,19 @@ function ManageTeam() {
       const data = await res.json();
       setTeams(data);
 
-      // Generate next team id: L01, L02, ..., L99
+      // Generate next team id: H01, H02, ..., H99
       const ids = Object.keys(data)
         .map((id) => {
-          const match = /^L(\d{2})$/.exec(id);
+          const match = /^H(\d{2})$/.exec(id);
           return match ? parseInt(match[1], 10) : null;
         })
         .filter((n) => n !== null) as number[];
       let nextNum = 1;
       while (ids.includes(nextNum) && nextNum <= 99) nextNum++;
-      setAutoTeamId(`L${nextNum.toString().padStart(2, "0")}`);
+      setAutoTeamId(`H${nextNum.toString().padStart(2, "0")}`);
     } catch (e) {
       setTeams({});
-      setAutoTeamId("L01");
+      setAutoTeamId("H01");
     }
   }
 
