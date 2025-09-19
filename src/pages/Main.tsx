@@ -422,7 +422,7 @@ function Main() {
             style={{objectFit: 'cover'}}
           />
           <div className="text-gray-300 font-bold text-sm sm:text-base md:text-lg tracking-wider text-center drop-shadow-lg" style={{letterSpacing: '0.08em'}}>
-            LIGHT WEIGHT CATEGORY
+            HEAVY WEIGHT CATEGORY
           </div>
         </div>
 
